@@ -1,0 +1,7 @@
+# 忽略
+build/*.js
+src/assets
+public
+dist
+
+
