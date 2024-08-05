@@ -9,7 +9,8 @@
         "prettier": "prettier  --write .",
         "eslint:src": "eslint \"src/**/*.{js,vue}\" \"src/main.js\"",
         "lint": "vue-cli-service lint",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lint:lint-staged": "lint-staged"
     },
     "dependencies": {
         "axios": "^1.7.3",
@@ -46,5 +47,21 @@
         "> 1%",
         "last 2 versions",
         "not dead"
-    ]
+    ],
+    "lint-staged": {
+        "*.{js,ts}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{cjs,json}": [
+            "prettier --write"
+        ],
+        "*.{vue,html}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{scss,css}": [
+            "prettier --write"
+        ]
+    }
 }
