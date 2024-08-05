@@ -13,9 +13,11 @@
 
 <script>
 export default {
-    data() {
+    data() {   
+
+        
         return {
-            theme: this.$store.state.settings.theme,
+               theme: this.$store.state.settings.theme,
         };
     },
     mounted() {

@@ -2,8 +2,12 @@
     <div class="layout">
         <div class="header">header</div>
                     <div class="main">
-            <div>main</div>
-            <div><router-view /></div>
+              <div>main</div>
+             <div><router-view /></div> 
+
+
+
+             
         </div>
     </div>
 </template>
