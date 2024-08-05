@@ -51,19 +51,9 @@
         "not dead"
     ],
     "lint-staged": {
-        "*.{js,ts}": [
+        "src/**/*.{js,vue}": [
             "eslint --fix",
-            "prettier --write"
-        ],
-        "*.{cjs,json}": [
-            "prettier --write"
-        ],
-        "*.{vue,html}": [
-            "eslint --fix",
-            "prettier --write"
-        ],
-        "*.{scss,css}": [
-            "prettier --write"
+            "git add"
         ]
     }
 }
