@@ -7,5 +7,7 @@ module.exports = {
     parserOptions: {
         parser: '@babel/eslint-parser', // 解析器
     },
-    rules: {},
+    rules: {
+        'vue/multi-word-component-names': 'off',
+    },
 };
