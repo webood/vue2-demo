@@ -9,6 +9,8 @@
         "prettier": "prettier  --write .",
         "eslint:src": "eslint \"src/**/*.{js,vue}\" \"src/main.js\"",
         "lint": "vue-cli-service lint",
+        "lint:prettier": "prettier  --write \"src/**/*.{ts,js,vue}\"",
+        "lint:eslint": "eslint \"src/**/*.{ts,js,vue}\" \"src/main.ts\"",
         "lint:lint-staged": "lint-staged",
         "prepare": "husky install"
     },
@@ -47,5 +49,27 @@
         "> 1%",
         "last 2 versions",
         "not dead"
-    ]
+    ],
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+            "prettier --write--parser json"
+        ],
+        "package.json": [
+            "prettier --write"
+        ],
+        "*.vue": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "*.{scss,less,styl,html}": [
+            "npm run prettier"
+        ],
+        "*.md": [
+            "npm run prettier"
+        ]
+    }
 }
